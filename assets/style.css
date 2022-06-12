@@ -1,0 +1,40 @@
+:root {
+    --primary: #ffffff;
+    --secondary: #0c68a4;
+    --text: #000000;
+    --border-radius: .3rem;
+  }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+  }
+  
+  textarea{
+    background: transparent;
+    border: none;
+    resize: none;
+    color: var(--text);
+    border-left: 1px solid black;
+    padding: 10px;
+  }
+  
+  h1 {
+    display: flex;  
+    justify-content: center;
+    color: var(--primary);
+    background-color: var(--secondary);
+  }
+  
+  
+  .submitBtn {
+    background-color: var(--secondary);
+    color: var(--primary);
+  }
+  
+  .submitBtn i:hover {
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+  }
+  

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+<link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header>
+      <h1> Weather Dashboard</h1>
+      <div class= "m-5 row justify-content-around">
+        <div class="col-sm">
+            <h3>Search for a City:</h3>
+            <form id="search-form">
+              <input name="city" id="city" type="text" autofocus="true" class="form-input card" />
+              <button type="submit" class="submitBtn">Search</button>
+            </form>
+        </div>
+    </div>
+    </header>
+    
+    
+    <main class="container">
+      <div class="card">
+        <h2> City: (date) (icon) </h2>
+        <div class="m-5 justify-content-around">
+          <p>Temp:</p>
+          <p>Wind:</p>
+          <p>Humidity</p>
+          <p>UV Index:</p>
+        </div>
+      </div>
+ 
+         
+      
+      <div>
+          <h2>5-Day Forecast:</h2>
+          <div class="m-5 row justify-content-around">
+            <div class="col-sm">1 of 5 columns</div>
+            <div class="col-sm">2 of 5 columns</div>
+            <div class="col-sm">3 of 5 columns</div>
+            <div class="col-sm">4 of 5 columns</div>
+            <div class="col-sm">5 of 5 columns</div>
+            
+          </div>
+        </div>
+
+    
+    </main>
+<script src="./assets/script.js"></script>
+</body>
+</html>
+
+
+
+
