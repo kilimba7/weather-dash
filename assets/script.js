@@ -2,6 +2,7 @@ var searchFormEl = document.querySelector("#search-form");
 var searchInputEl = document.querySelector("#city");
 var forecast = $("#forecast");
 var cityHeader = $("#city-header");
+var forecastHeader = $("#forecast-header");
 var dailyForecast = $("#daily-forecast");
 
 var formSubmitHandler = function (event) {
@@ -31,8 +32,13 @@ var getForecastData = function (citySearch) {
              .addClass("pr-3 pb-2 card")
              .text("Daily Forecast for: " + data.city.name);
 
+          fiveDay = $("<h2>")
+            .addClass("pr-3")
+            .text("5-Day Forecast: ");
+
         
           cityHeader.append(cityName);
+          forecastHeader.append(fiveDay)
        });
     });
  
@@ -61,7 +67,6 @@ var getForecastData = function (citySearch) {
     
       dailyForecast.append(temp, wind, humid);
      }
-    
   }
     
 
