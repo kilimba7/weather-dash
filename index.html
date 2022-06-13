@@ -22,37 +22,36 @@
     <title>Weather Dashboard</title>
 </head>
 <body>
-    <header>
-      <h1> Weather Dashboard</h1>
-      <div class= "m-5 row justify-content-around">
-        <div class="col-sm">
-            <h3>Search for a City:</h3>
-            <form id="search-form">
-              <input name="city" id="city" type="text" autofocus="true" class="form-input card" />
-              <button type="submit" class="submitBtn">Search</button>
-            </form>
-        </div>
+  <header>
+    <h1>Weather Dashboard</h1>
+    <div class="m-5 row justify-content-around">
+      <div class="col-sm">
+        <h3>Search for a City:</h3>
+        <form id="search-form">
+          <input
+            name="city"
+            id="city"
+            type="text"
+            autofocus="true"
+            class="form-input card"
+          />
+          <button type="submit" class="submitBtn">Search</button>
+        </form>
     </div>
-    </header>
-    
-    
-    <main class="container">
-      <div class='card'>
-        <h2>Daily:</h2>
-        <div id="city-name" class="row">
-        </div>
     </div>
- 
-         
-      
-      <div>
-          <h2>5-Day Forecast:</h2>
-          <div id="forecast" class="row">
-          </div>
-      </div>
+  </header>
 
-    
-    </main>
+  <main class="container-fluid">
+      <div class="d-flex flex-row">
+        <h2  id="city-header"></h2>
+      </div>
+      <div id="daily-forecast" class="col"></div>
+
+    <div class="pt-4 pb-2">
+        <h2 class="pr-3">5-Day Forecast:</h2>
+      <div id="forecast" class="row"></div>
+    </div>
+  </main>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="./assets/script.js"></script>
