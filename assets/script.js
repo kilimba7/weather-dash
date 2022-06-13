@@ -51,10 +51,14 @@ var getWeatherForecast = function (citySearch) {
           
           var temp = $("<p>")
           .addClass("card-text")
-          .text("Temperature: " + data.list[i].main.temp + " °F");
+          .text("Temp: " + data.list[i].main.temp + " °F");
+
+          var wind = $("<p>")
+          .addClass("card-text")
+          .text("Wind Speed: " + data.list[i].wind.speed + " MPH");
 
           // Append everything to display
-          col.append(card.append(cardBody.append(title, img, temp, humid)))
+          col.append(card.append(cardBody.append(title, img, temp, wind, humid)))
           forecast.append(col);
         }
       }
