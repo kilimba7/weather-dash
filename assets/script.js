@@ -4,6 +4,7 @@ var forecast = $("#forecast");
 var cityHeader = $("#city-header");
 var forecastHeader = $("#forecast-header");
 var dailyForecast = $("#daily-forecast");
+var random = $("#random");
 
 var formSubmitHandler = function (event) {
   event.preventDefault();
@@ -13,10 +14,16 @@ var formSubmitHandler = function (event) {
      getForecastData(citySearch);
      searchInputEl.value = "";
      localStorage.setItem('city', citySearch);
-  } else {
+     
+     var cityHistory = $("<h2>")
+     .addClass("card bg-primary text-white")
+     .text("Recently searched: " + citySearch);
+  
+    } else {
      alert("Please enter a valid city name!");
   }
   localStorage.getItem(citySearch);
+  random.append(cityHistory);
   console.log(event);
 };
 
@@ -33,17 +40,13 @@ var getForecastData = function (citySearch) {
           getDailyWeatherForecast(data);
           getFiveDayWeatherForecast(data);
  
-          cityName = $("<h2>")
-             .addClass("pr-3 pb-2 card")
-             .text("Daily Forecast for: " + data.city.name);
-             
+         
 
           fiveDay = $("<h2>")
             .addClass("pr-3")
             .text("5-Day Forecast: ");
 
         
-          cityHeader.append(cityName);
           forecastHeader.append(fiveDay)
        });
     });
@@ -68,10 +71,14 @@ var getForecastData = function (citySearch) {
           var temp = $("<p>")
              .addClass("card-text")
              .text("Temp: " + forecastData.list[0].main.temp + " °F");
+             
+           var cityName = $("<h2>")
+             .text("Daily Forecast for: " + forecastData.city.name);
+          
        
        // Append everything to display
     
-      dailyForecast.append(temp, wind, humid);
+      dailyForecast.append(cityName, temp, wind, humid);
      }
   }
     
