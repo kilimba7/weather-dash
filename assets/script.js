@@ -12,11 +12,16 @@ var formSubmitHandler = function (event) {
   if (citySearch) {
      getForecastData(citySearch);
      searchInputEl.value = "";
+     localStorage.setItem('city', citySearch);
   } else {
      alert("Please enter a valid city name!");
   }
+  localStorage.getItem(citySearch);
   console.log(event);
 };
+
+
+
 
 var getForecastData = function (citySearch) {
     var cityName = '';
@@ -31,6 +36,7 @@ var getForecastData = function (citySearch) {
           cityName = $("<h2>")
              .addClass("pr-3 pb-2 card")
              .text("Daily Forecast for: " + data.city.name);
+             
 
           fiveDay = $("<h2>")
             .addClass("pr-3")
